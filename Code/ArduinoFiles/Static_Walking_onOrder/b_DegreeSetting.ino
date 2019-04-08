@@ -28,6 +28,18 @@ void resetPosition(){
   moveServos();
 }
 
+void goToSleep(){
+  setLastDegrees();
+
+  for(int i = 0; i < ELEMENTS; i++){
+      degsBot[i] = 130;
+      degsTop[i] = 130;
+      degsIn[i] = 40;
+  }
+  
+  moveServos();
+}
+
 /*
  *  Lifts either the odd or the even numbered legs up
  *  0 == even, 1 == odd
@@ -133,6 +145,42 @@ void moveOddLegsBackwards(){
     degsIn[5] = 30;
     degsBot[5] = 90;
 
+    moveServos();
+}
+
+void moveEvenLegsRight(){
+    setLastDegrees();
+
+    degsIn[0] = 30;
+    degsIn[2] = 50;
+    degsBot[4] = 90;
+    moveServos();    
+}
+
+void moveEvenLegsLeft(){
+    setLastDegrees();
+
+    degsIn[0] = 50;
+    degsIn[2] = 30;
+    degsBot[4] = 30;
+    moveServos();
+}
+
+void moveOddLegsRight(){
+    setLastDegrees();
+
+    degsBot[1] = 30;
+    degsIn[3] = 50;
+    degsIn[5] = 30;
+    moveServos();
+}
+
+void moveOddLegsLeft(){
+    setLastDegrees();
+
+    degsBot[1] = 90;
+    degsIn[3] = 30;
+    degsIn[5] = 50;
     moveServos();
 }
 

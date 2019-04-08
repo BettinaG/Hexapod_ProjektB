@@ -40,6 +40,34 @@ void walkBackwards(){
     moveEvenLegsForwards();
 }
 
+void walkRight(){
+    moveLegsUp(0);
+    moveEvenLegsRight();
+    moveLegsDown(0);
+
+    moveLegsUp(1);
+    moveEvenLegsLeft();
+    moveOddLegsRight();
+
+    moveLegsDown(1);
+    moveLegsUp(0);
+    moveOddLegsLeft();
+}
+
+void walkLeft(){
+    moveLegsUp(0);
+    moveEvenLegsLeft();
+    moveLegsDown(0);
+
+    moveLegsUp(1);
+    moveEvenLegsRight();
+    moveOddLegsLeft();
+
+    moveLegsDown(1);
+    moveLegsUp(0);
+    moveOddLegsRight();
+}
+
 /*
  *  Calls the Degree Settings in an order that makes th hexapod move in a dance motion
  */

@@ -2,6 +2,7 @@
 
 void setup() {
   Serial.begin(9600);                                     // Setting up Serial communication
+  
   pwm.begin();
   pwm.setPWMFreq(60);
   delay(10);
@@ -10,6 +11,8 @@ void setup() {
   innerServo5.attach(11);                                 // Connection Servo Number 5 to the Digital Pin Number 11 on the Arduino
   delay(10);
   
+  
+  c = ' ';
   order = 'r';                                            // Setting the current order to 'reset'
   //Startpositionen
   for(int i = 0; i < ELEMENTS; i++){                      // Setting the starposition for each servo motor
@@ -41,19 +44,24 @@ void setup() {
 }
 
 void loop() {  
-  if (Serial.available() > 0) {    // is a character available?               
+  if (Serial.available()) {    // is a character available?               
     input = Serial.read();       // get the character
   
-    if (input == 'r' || input == 'f' || input == 'b') {
-        order = input;
+    if (input == 'U' || input == 'D' || input == 'u' || input == 'd' || input == 'V') {
+
     } else {
         Serial.println("Ungueltiger Befehl");
     }
   }
   
-  if      (order == 'r')  resetPosition();
-  else if (order == 'f')  walkForwards();
-  else if (order == 'b')  walkBackwards();
+  if      (input == 'u' || input == 'd' || input == 'l' || input == 'r' || input == 'v' || input == 'w' || input == 'W')  resetPosition();
+  else if (input == 'U') walkForwards();
+  else if (input == 'D') walkBackwards();
+  else if (input == 'L') walkLeft();
+  else if (input == 'R') walkRight();
+  else if (input == 'V') dance();
+  else if (input == 'S' || input == 's') goToSleep();
+  else if (input == 'W') resetPosition();
 }
 
 
