@@ -16,4 +16,4 @@ Dieser Ordner enthält die fertige ControllerApp, sowie die Datei mit der die An
 **Dokumentation**
 
 Die Dokumentation ist aufgeteilt in eine Projektauswertung.pdf und eine Dokumentation.pdf. Letzteres enthält eine Bedienunsanleitung, ein Entwicklerhandbuch, sowie eine Beschreibung der Softwarearchitektur.
-Außerdem enthält der Ordner eine Bilder des von uns gebauten Hexapods.
+Außerdem enthält der Ordner Bilder des von uns gebauten Hexapods.
