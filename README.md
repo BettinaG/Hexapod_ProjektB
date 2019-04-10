@@ -10,7 +10,7 @@ Hier sind sämtliche Dateien abgelegt, die den Code beinhalten, die den Hexapod-
 
 **ControllerApp**
 
-Dieser Ordner enthält die fertige ControllerApp, sowie die Datei mit der die Anwendung weiter modifiziert werden kann.
+Dieser Ordner enthält die fertige ControllerApp, sowie die Datei mit der die Anwendung weiter modifiziert werden kann. Dafür dann hier http://ai2.appinventor.mit.edu/ einloggen und die .aia Datei importieren.
 
 
 **Dokumentation**
